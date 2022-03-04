@@ -21,24 +21,23 @@ public class TC5_StateDropdown {
 
        Select stateDropDown = new Select(driver.findElement(By.xpath("//select[@id='state']")));
 
-
+       // Use all Select options. (visible text, value, index)
 //        3. Select Illinois
         Thread.sleep(1000);
         stateDropDown.selectByVisibleText("Illinois");
 
-//        4. Select Virginia
-        Thread.sleep(1000);
+      // 4. Select Virginia
+       Thread.sleep(1000);
         stateDropDown.selectByValue("VA");
 
-//        5. Select California
-        Thread.sleep(1000);
-        stateDropDown.selectByIndex(5);
+        //5. Select California
+       Thread.sleep(1000);
+        stateDropDown.selectByIndex(5);// in selenium index start from 1
 
-//        6. Verify final selected option is California.
+        //6. Verify final selected option is California.
         String expectedOptionText = "California";
         String actualOptionText = stateDropDown.getFirstSelectedOption().getText();
 
-//        Use all Select options. (visible text, value, index)
 
     }
 }
