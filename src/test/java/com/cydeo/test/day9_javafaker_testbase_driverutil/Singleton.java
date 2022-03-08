@@ -17,7 +17,7 @@ public class Singleton {
                     "Assigning value to it now!");
             word = "something";
         }else {
-
+            System.out.println("Word already has value.");
         }
         return word;
     }
